@@ -7,14 +7,14 @@ export default function ScrollReveal() {
   const pathname = usePathname();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const sections = Array.from(
       document.querySelectorAll<HTMLElement>("main > section")
     ).slice(1);
     if (!sections.length) return;
-
-    sections.forEach((el) => el.classList.add("reveal"));
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,7 +28,13 @@ export default function ScrollReveal() {
       { threshold: 0.12, rootMargin: "0px 0px -80px 0px" }
     );
 
-    sections.forEach((el) => observer.observe(el));
+    requestAnimationFrame(() => {
+      sections.forEach((el) => {
+        el.classList.add("reveal");
+        observer.observe(el);
+      });
+    });
+
     return () => observer.disconnect();
   }, [pathname]);
 

@@ -1,16 +1,26 @@
 export const site = {
-  name: "Bertharry English Private School",
-  shortName: "Bertharry",
-  address: "14 Mapungubwe Street Tembisa",
-  fullAddress: "14 Mapungubwe Street Temong Section Tembisa 1632",
-  email: "bertharry@bertharryschools.co.za",
-  phone: "+27 (011) 924 6012",
-  website: "www.bertharryschools.co.za",
+  name: "JHB Christian Academy",
+  shortName: "JHBCA",
+  address: "69 Turf Club Road Turffontein, Johannesburg",
+  fullAddress: "69 Turf Club Road Turffontein, Johannesburg, 2130",
+  email: "info@jhbchristianacademy.co.za",
+  phone: "011 025 7333",
+  altPhone: "078 112 3137 / 065 512 4003 / 081 583 7908",
+  postalAddress: "P.O. BOX 1223 Southdale, Johannesburg, 2135",
+  website: "www.jhb.goonline.co.za",
 };
 
 export const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
+  {
+    label: "About Us",
+    href: "/about",
+    children: [
+      { label: "About Us", href: "/about" },
+      { label: "Fees & Uniform", href: "/about/fees-and-uniform" },
+      { label: "Payments", href: "/about/payments" },
+    ],
+  },
   {
     label: "Academics",
     href: "/academics",
@@ -29,7 +39,6 @@ export const navLinks = [
 export const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Team", href: "/about#team" },
   { label: "Our Courses", href: "/academics" },
   { label: "Success Stories", href: "/success-stories" },
   { label: "Register Now", href: "/admissions" },
@@ -37,8 +46,8 @@ export const quickLinks = [
 ];
 
 export const downloads = [
-  { label: "Fee Structure", href: "#" },
-  { label: "Registration Form", href: "#" },
-  { label: "School Brochure", href: "#" },
-  { label: "Course Structure", href: "#" },
+  {
+    label: "Enrolment Form",
+    href: "https://www.jhb.goonline.co.za/assets/docs/JHBCA-ENROLEMENT-FORM-2024.pdf",
+  },
 ];

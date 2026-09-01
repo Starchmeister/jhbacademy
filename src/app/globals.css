@@ -11,8 +11,8 @@
   --line-strong: rgba(23, 24, 27, 0.26);
   --fill-ghost: rgba(23, 24, 27, 0.05);
   --fill-solid: #17181b;
-  --accent: #04339a;
-  --accent-dark: #052a7d;
+  --accent: #A10F36;
+  --accent-dark: #7d0b29;
   --gutter: clamp(20px, 5vw, 100px);
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
   --radius: 12px;

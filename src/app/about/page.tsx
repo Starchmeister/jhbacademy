@@ -1,13 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
-import { team } from "@/data/team";
+import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About Us — Bertharry English Private School",
+  title: "About Us — JHB Christian Academy",
   description:
-    "For over 30 years, Bertharry English Private School has nurtured students into doctors, lawyers, engineers and business leaders from its home in Tembisa.",
+    "JHB Christian Academy is a Christ-centered school in Johannesburg offering affordable education from Grade R to Grade 12, combining academic excellence with spiritual growth.",
 };
 
 const alumniFields = ["Doctors", "Lawyers", "Engineers", "Business Leaders"];
@@ -36,51 +35,42 @@ const enrollFeatures = [
   "Career Oriented",
 ];
 
-function initials(name: string) {
-  return name
-    .replace(/[^A-Za-z .]/g, "")
-    .split(" ")
-    .filter(Boolean)
-    .map((p) => p[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
-}
-
 export default function AboutPage() {
   return (
     <>
       <PageHeader
         eyebrow="Our Story"
         title="About Us"
-        description="Three decades of building young people holistically in the heart of Tembisa."
+        description="A Christ-centered school nurturing learners from Grade R to Grade 12 in the heart of Johannesburg."
       />
+
+      <div className="container-gutter py-5 border-b border-[var(--line)] flex items-center gap-6">
+        <span className="font-[family-name:var(--font-sora)] text-sm text-[var(--text-dim)]">In this section:</span>
+        <Link href="/about" className="mono-label text-[13px] text-[var(--accent)] underline underline-offset-4">About Us</Link>
+        <Link href="/about/fees-and-uniform" className="mono-label text-[13px] link-hover">Fees &amp; Uniform</Link>
+        <Link href="/about/payments" className="mono-label text-[13px] link-hover">Payments</Link>
+      </div>
 
       {/* Welcome */}
       <section className="container-gutter py-20 md:py-28 grid gap-14 lg:grid-cols-[1.3fr_1fr] items-start">
         <div>
           <span className="chip">Welcome</span>
           <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(26px,3vw,38px)] leading-tight mt-6">
-            Welcome to Bertharry English Private School
+            Welcome to JHB Christian Academy
           </h2>
           <p className="mt-6 text-[var(--text-dim)] text-lg leading-relaxed max-w-xl">
-            For over 30 years, Bertharry English Private School has proudly
-            nurtured and developed students into successful professionals
-            across various fields. With a proven track record of excellence,
-            our alumni have gone on to become doctors, lawyers, engineers,
-            and business leaders, making a significant impact both locally
-            and globally. Our holistic approach to education, coupled with a
-            strong academic foundation, has empowered generations of
-            students to pursue their dreams and excel in competitive
-            industries.
+            JHB Christian Academy is a Christ-centered school in Johannesburg
+            that offers affordable education from Grade R to Grade 12. We
+            combine academic excellence with spiritual growth and personal
+            development, preparing students for success in life and a
+            positive impact on their communities.
           </p>
           <p className="mt-6 text-[var(--text-dim)] text-lg leading-relaxed max-w-xl">
-            At Bertharry, we are committed to providing a supportive
-            learning environment that fosters critical thinking, leadership,
-            and personal growth. Our success stories over the past three
-            decades are a testament to the quality of education and
-            opportunities we provide, helping learners build solid futures
-            and contributing to society in meaningful ways.
+            We pride ourselves in a Christian-based education ethos. We
+            spread the word of positivity, honesty, and hard work, while
+            working smart to achieve remarkable outcomes from our pupils.
+            If you are looking for the best schools in Johannesburg, JHB
+            Christian Academy is the place for you.
           </p>
           <div className="mt-10">
             <Link href="/contact" className="btn-solid">
@@ -90,7 +80,9 @@ export default function AboutPage() {
         </div>
 
         <div>
-        <ImagePlaceholder className="aspect-[4/3] mb-6" />
+        <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-[var(--line)] mb-6">
+          <Image src="/images/about-us.webp" alt="JHB Christian Academy" fill className="object-cover" sizes="(min-width:1024px) 40vw, 100vw" />
+        </div>
         <div className="rounded-xl border border-[var(--line)] bg-[var(--panel)] p-8 md:p-10">
           <p className="mono-label text-[11px] text-[var(--text-dimmer)]">
             Our Alumni Go On To Become
@@ -109,7 +101,7 @@ export default function AboutPage() {
           </ul>
           <div className="h-px bg-[var(--line)] my-8" />
           <p className="text-[var(--text-dim)] leading-relaxed text-sm">
-            See where some of our Old Bertharrians are today on our{" "}
+            See where some of our top achievers are today on our{" "}
             <Link
               href="/success-stories"
               className="underline underline-offset-4 link-hover"
@@ -131,38 +123,44 @@ export default function AboutPage() {
               Historical Background
             </h2>
             <p className="mt-6 text-[var(--text-dim)] text-lg leading-relaxed max-w-xl">
-              Established in 1991, the school was named after its
-              co-founding siblings, now Directors, Bertha and Harry
-              Kumwenda. With a very humble beginning of a township crèche,
-              and with only three learners, the school first opened its
-              doors in Endulwini, at St Mathews Catholic Church premises.
+              Founded in 2019, JHB Christian Academy was established with a
+              vision to provide affordable, Christ-centered education in
+              Johannesburg. The school is situated at 69 Turf Club Road,
+              Turffontein, and serves learners from Grade R through to
+              Grade 12.
             </p>
             <p className="mt-6 text-[var(--text-dim)] text-lg leading-relaxed max-w-xl">
-              The school improved each passing year with the introduction
-              of the Primary school phase as the children graduated from
-              the pre-school. The school prides itself as the first black
-              owned private school, in the township, to have English as
-              its Home Language and Afrikaans as the First Additional
-              Language.
+              The academy has grown to offer five different streams in the
+              FET phase and achieved an outstanding 100%+ pass rate in the
+              2024 Matric examinations, cementing its reputation as one of
+              Johannesburg&apos;s leading independent schools.
             </p>
           </div>
 
-          <div className="rounded-xl border border-[var(--line)] bg-[var(--panel)] p-8 md:p-10">
-            <p className="mono-label text-[11px] text-[var(--text-dimmer)]">
-              Founding Directors
-            </p>
-            <p className="font-[family-name:var(--font-sora)] text-2xl mt-4">
-              Bertha Kumwenda
-            </p>
-            <p className="font-[family-name:var(--font-sora)] text-2xl mt-1">
-              Harry Kumwenda
-            </p>
-            <div className="h-px bg-[var(--line)] my-8" />
-            <p className="text-[var(--text-dim)] leading-relaxed">
-              Named after its co-founding siblings, now Directors, the
-              school first opened its doors in Endulwini in 1991 — and has
-              served Tembisa families ever since.
-            </p>
+          <div className="rounded-xl border border-[var(--line)] bg-[var(--panel)] overflow-hidden">
+            <div className="relative w-full aspect-[4/3]">
+              <Image
+                src="/principal.webp"
+                alt="Michael Macfarlane — Principal"
+                fill
+                className="object-cover object-top"
+                sizes="(min-width: 1024px) 30vw, 100vw"
+              />
+            </div>
+            <div className="p-8 md:p-10">
+              <p className="mono-label text-[11px] text-[var(--text-dimmer)]">
+                Principal
+              </p>
+              <p className="font-[family-name:var(--font-sora)] text-2xl mt-4">
+                Michael Macfarlane
+              </p>
+              <div className="h-px bg-[var(--line)] my-6" />
+              <p className="text-[var(--text-dim)] leading-relaxed">
+                Founded in 2019, JHB Christian Academy has served Johannesburg
+                families with affordable, quality Christian education from
+                Grade R to Grade 12 ever since.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -176,15 +174,13 @@ export default function AboutPage() {
           </h2>
         </div>
         <p className="text-[var(--text-dim)] text-lg leading-relaxed max-w-2xl">
-          Our vision, beyond providing quality education, is hinged on
-          empowering our students to acquire, demonstrate, articulate,
-          value knowledge and skills. This attribute, we believe, will
-          support them as life-long learners, to participate and
-          contribute to the global world and practice the core values of
-          the school, respect, tolerance, inclusion and excellence. We
-          endeavour to provide the highest programs possible from early
-          childhood through high school, to nourish the body, mind, and
-          soul of each child in our care.
+          To prepare our learners for their future lives in the modern
+          world, we aim to nurture a love of learning and the pursuit of
+          academic excellence. JHB Christian Academy learners are
+          encouraged to develop independence, adaptability, determination
+          and confidence. We combine academic excellence with spiritual
+          growth and personal development, preparing students for success
+          in life and a positive impact on their communities.
         </p>
       </section>
 
@@ -208,11 +204,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Bertharry */}
+      {/* Why JHBCA */}
       <section className="container-gutter py-20 md:py-28">
-        <span className="chip">Why Bertharry</span>
+        <span className="chip">Why JHBCA</span>
         <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(28px,3.4vw,44px)] leading-tight mt-6 mb-12 max-w-2xl">
-          What sets a Bertharrian apart
+          What sets a JHBCA learner apart
         </h2>
         <ul className="grid rounded-xl overflow-hidden border-t border-l border-[var(--line)] sm:grid-cols-2">
           {whyStudy.map((item, i) => (
@@ -226,40 +222,11 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      {/* Team */}
-      <section id="team" className="bg-[var(--bg-alt)] border-y border-[var(--line)] scroll-mt-24">
-        <div className="container-gutter py-20 md:py-28">
-          <span className="chip">The People</span>
-          <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(28px,3.4vw,44px)] leading-tight mt-6 mb-14">
-            Our Team
-          </h2>
-
-          <div className="grid rounded-xl overflow-hidden border-t border-l border-[var(--line)] sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((member, i) => (
-              <div
-                key={`${member.name}-${i}`}
-                className="bg-[var(--panel)] p-6 flex items-center gap-4 border-r border-b border-[var(--line)]"
-              >
-                <div className="avatar-initials">{initials(member.name)}</div>
-                <div>
-                  <p className="font-[family-name:var(--font-sora)] leading-snug">
-                    {member.name}
-                  </p>
-                  <p className="mono-label text-[11px] text-[var(--text-dimmer)] mt-1">
-                    {member.role}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="section-dark bg-[var(--fill-solid)] text-[#f5f4f1]">
         <div className="container-gutter py-20 md:py-28 text-center">
           <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(28px,4vw,52px)] leading-tight">
-            Enroll Your Child Today!
+            Enroll at JHB Christian Academy Today!
           </h2>
 
           <div className="mt-10 flex flex-wrap justify-center gap-3">

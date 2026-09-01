@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import PhaseNav from "@/components/PhaseNav";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import Image from "next/image";
 import {
   phases,
   highSchoolOutcomes,
@@ -13,9 +13,9 @@ import {
 const phase = phases.find((p) => p.id === "high-school")!;
 
 export const metadata: Metadata = {
-  title: "High School — Bertharry English Private School",
+  title: "High School — JHB Christian Academy",
   description:
-    "Bertharry High School — a strong academic foundation aimed at a Bachelor Pass, for Grades 8 to 12.",
+    "JHB Christian Academy High School — a strong academic foundation aimed at a Bachelor Pass, for Grades 8 to 12.",
 };
 
 export default function HighSchoolPage() {
@@ -44,10 +44,10 @@ export default function HighSchoolPage() {
       <section className="container-gutter py-20 md:py-28 grid gap-14 lg:grid-cols-[1.3fr_1fr] items-start">
         <div>
           <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(26px,3vw,38px)] leading-tight max-w-3xl">
-            Welcome to Bertharry High School
+            Welcome to JHBCA High School
           </h2>
           <p className="mt-6 text-[var(--text-dim)] text-lg leading-relaxed max-w-3xl">
-            At Bertharry High School, our focus is on providing a strong
+            At JHB Christian Academy High School, our focus is on providing a strong
             academic foundation while preparing students for life beyond
             matric. We aim to equip our learners with the skills and
             knowledge necessary to achieve a Bachelor Pass, ensuring that
@@ -66,7 +66,9 @@ export default function HighSchoolPage() {
             communication skills.
           </p>
         </div>
-        <ImagePlaceholder className="aspect-[4/5]" />
+        <div className="relative aspect-[4/5] rounded-xl overflow-hidden border border-[var(--line)]">
+          <Image src="/images/about-3.webp" alt="JHBCA High School" fill className="object-cover" sizes="(min-width:1024px) 40vw, 100vw" />
+        </div>
       </section>
 
       {/* Outcomes */}
@@ -77,7 +79,7 @@ export default function HighSchoolPage() {
             By the time students graduate
           </h2>
           <p className="text-[var(--text-dim)] text-lg leading-relaxed max-w-2xl mb-10">
-            Bertharry High School learners are expected to have:
+            JHBCA High School learners are expected to have:
           </p>
           <ul className="grid rounded-xl overflow-hidden border-t border-l border-[var(--line)] md:grid-cols-2">
             {highSchoolOutcomes.map((item, i) => (
@@ -90,12 +92,12 @@ export default function HighSchoolPage() {
             ))}
           </ul>
           <p className="mt-10 text-[var(--text-dim)] text-lg leading-relaxed max-w-2xl">
-            At Bertharry, we are committed to ensuring that our high school
-            graduates are not only well-prepared for their matric exams but
-            also for a bright future in tertiary education and beyond. We
-            empower our learners to aim higher, pursue their dreams, and
-            confidently step into the world of higher learning and career
-            opportunities.
+            At JHB Christian Academy, we are committed to ensuring that our
+            high school graduates are not only well-prepared for their matric
+            exams but also for a bright future in tertiary education and
+            beyond. We empower our learners to aim higher, pursue their
+            dreams, and confidently step into the world of higher learning
+            and career opportunities.
           </p>
         </div>
       </section>

@@ -47,8 +47,8 @@ export default function Nav() {
       <div className="flex items-center justify-between container-gutter py-5">
         <Link href="/" className="shrink-0">
           <img
-            src="/bertharrylogo.svg"
-            alt="Bertharry English Private School"
+            src="/LOGGO2.png"
+            alt="JHB Christian Academy"
             width={64}
             height={63}
             className="h-11 w-auto md:h-14 rounded-lg"
@@ -198,7 +198,7 @@ export default function Nav() {
 
       <div className="bg-[var(--accent)] text-[#f5f4f1]">
         <p className="container-gutter py-2.5 text-center mono-label text-[13px]">
-          2025 Admissions are now open —{" "}
+          {new Date().getFullYear()} Admissions are now open —{" "}
           <Link href="/admissions" className="underline underline-offset-4">
             Apply Now
           </Link>

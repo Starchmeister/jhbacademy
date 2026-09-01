@@ -89,7 +89,7 @@ export default function SuccessStoriesCarousel() {
               className="pointer-events-none absolute inset-0 transition-opacity duration-500"
               style={{
                 background: active
-                  ? "linear-gradient(180deg, rgba(4,51,154,0) 30%, rgba(4,51,154,0.55) 70%, rgba(6,17,40,0.92) 100%)"
+                  ? "linear-gradient(180deg, rgba(161,15,54,0) 30%, rgba(161,15,54,0.55) 70%, rgba(80,5,20,0.92) 100%)"
                   : "linear-gradient(180deg, rgba(8,9,12,0) 55%, rgba(8,9,12,0.8) 100%)",
               }}
             />

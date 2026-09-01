@@ -1,15 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { team } from "@/data/team";
 import { phases } from "@/data/academics";
 import SuccessStoriesCarousel from "@/components/SuccessStoriesCarousel";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 const whyStudy = [
-  "Umalusi Accreditation",
-  "Excellent academic standard",
-  "Strong encouragement for sports",
-  "Strong encouragement for extra curricular (eg. chess, choir)",
+  "Christ-centered education ethos",
+  "Over 100% pass rate for 2024 Matric results",
+  "5 different streams available in FET phase",
+  "Strong focus on academics, sports and personal development",
 ];
 
 const galleryPreview = [
@@ -25,92 +23,64 @@ const admissionSteps = [
   { title: "Enroll", description: "Submit your application online to secure your child's place." },
 ];
 
-function initials(name: string) {
-  return name
-    .replace(/[^A-Za-z .]/g, "")
-    .split(" ")
-    .filter(Boolean)
-    .map((p) => p[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
-}
-
 export default function Home() {
   return (
     <>
       {/* Hero */}
       <section className="container-gutter py-20 md:py-28">
-        <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr] items-start">
-        <div>
-          <span className="chip">Est. 1991</span>
-          <h1 className="font-[family-name:var(--font-sora)] font-light text-[clamp(38px,6vw,72px)] leading-[1.05] mt-8">
-            Bertharry English
-            <br />
-            Private School
-          </h1>
-          <p className="mt-8 text-[var(--text-dim)] text-lg leading-relaxed max-w-xl">
-            Established in 1991 the school was named after its co-founding
-            siblings, now Directors, Bertha and Harry Kumwenda.
-          </p>
-          <p className="mt-4 text-[var(--text-dim)] text-lg leading-relaxed max-w-xl">
-            With a very humble beginning of a township crèche, and with only
-            three learners, the school first opened its doors in Endulwini,
-            at St Mathews Catholic Church premises.
-          </p>
-          <div className="mt-10">
-            <Link href="/about" className="btn-solid">
-              More About Us
-            </Link>
-          </div>
-        </div>
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] items-center">
 
-        <div className="relative">
-          <div className="relative aspect-[4/5] w-full rounded-xl border border-[var(--line)] overflow-hidden">
-            <Image
-              src="/homeimg1.png"
-              alt="Bertharry English Private School campus"
-              fill
-              priority
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="absolute bottom-5 left-5 right-5 rounded-xl border border-[var(--line)] bg-[var(--panel)]/95 backdrop-blur-sm p-6 grid grid-cols-2 gap-6 shadow-sm">
+          {/* Left — text */}
           <div>
-            <p className="font-[family-name:var(--font-sora)] font-light text-3xl">
-              1991
+            <span className="chip">Est. 2019</span>
+            <h1 className="font-[family-name:var(--font-sora)] font-light text-[clamp(38px,6vw,72px)] leading-[1.05] mt-8">
+              JHB Christian
+              <br />
+              Academy
+            </h1>
+            <p className="mt-8 text-[var(--text-dim)] text-lg leading-relaxed max-w-xl">
+              JHB Christian Academy is a Christ-centered school in Johannesburg
+              that offers affordable education from Grade R to Grade 12.
             </p>
-            <p className="mono-label text-[11px] text-[var(--text-dimmer)] mt-2">
-              Founded
+            <p className="mt-4 text-[var(--text-dim)] text-lg leading-relaxed max-w-xl">
+              We combine academic excellence with spiritual growth and personal
+              development, preparing students for success in life and a positive
+              impact on their communities.
             </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link href="/about" className="btn-solid">More About Us</Link>
+              <Link href="/admissions" className="btn-ghost">Enroll Now</Link>
+            </div>
+
+            {/* Stats row */}
+            <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-px bg-[var(--line)] rounded-xl overflow-hidden border border-[var(--line)]">
+              {[
+                { value: "2019", label: "Founded" },
+                { value: "100%+", label: "2024 Pass Rate" },
+                { value: "5", label: "FET Streams" },
+                { value: "Gr R–12", label: "Grades Offered" },
+              ].map((stat) => (
+                <div key={stat.label} className="bg-[var(--bg)] px-5 py-4">
+                  <p className="font-[family-name:var(--font-sora)] font-light text-2xl">{stat.value}</p>
+                  <p className="mono-label text-[10px] text-[var(--text-dimmer)] mt-1">{stat.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
-          <div>
-            <p className="font-[family-name:var(--font-sora)] font-light text-3xl">
-              30+
-            </p>
-            <p className="mono-label text-[11px] text-[var(--text-dimmer)] mt-2">
-              Years of Excellence
-            </p>
+
+          {/* Right — video panel */}
+          <div className="relative rounded-2xl overflow-hidden border border-[var(--line)] aspect-[9/10] lg:aspect-[4/5]">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/images/home_page_1.webm" type="video/webm" />
+            </video>
           </div>
-          <div>
-            <p className="font-[family-name:var(--font-sora)] font-light text-3xl">
-              3
-            </p>
-            <p className="mono-label text-[11px] text-[var(--text-dimmer)] mt-2">
-              Founding Learners
-            </p>
-          </div>
-          <div>
-            <p className="font-[family-name:var(--font-sora)] font-light text-3xl">
-              2
-            </p>
-            <p className="mono-label text-[11px] text-[var(--text-dimmer)] mt-2">
-              School Phases
-            </p>
-          </div>
-          </div>
-        </div>
+
         </div>
       </section>
 
@@ -118,16 +88,16 @@ export default function Home() {
       <section className="bg-[var(--bg-alt)] border-y border-[var(--line)]">
         <div className="container-gutter py-20 md:py-28 grid gap-14 lg:grid-cols-2">
           <div>
-            <span className="chip">Why Bertharry</span>
+            <span className="chip">Why JHBCA</span>
             <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(30px,3.6vw,46px)] leading-tight mt-6">
-              Why Study at Bertharry?
+              Why Study at JHB Christian Academy?
             </h2>
             <p className="mt-6 text-[var(--text-dim)] leading-relaxed max-w-lg">
-              With 30 years of educational experience, Bertharry is one of
-              the oldest schools in Tembisa. Our focus goes beyond
-              academics; we are committed to building young people
-              holistically, ensuring they have the best opportunities for
-              life success.
+              We pride ourselves in a Christian-based education ethos. We
+              spread the word of positivity, honesty, and hard work, while
+              working smart to achieve remarkable outcomes from our pupils.
+              If you are looking for the best schools in Johannesburg, JHB
+              Christian Academy is the place for you.
             </p>
             <div className="mt-10">
               <Link href="/admissions" className="btn-solid">
@@ -138,8 +108,12 @@ export default function Home() {
 
           <div>
             <div className="grid grid-cols-2 gap-4 mb-8">
-              <ImagePlaceholder className="aspect-square mt-8" />
-              <ImagePlaceholder className="aspect-square" />
+              <div className="relative aspect-square mt-8 rounded-xl overflow-hidden border border-[var(--line)]">
+                <Image src="/images/gallery/img-9500.webp" alt="JHBCA learners" fill className="object-cover" sizes="20vw" />
+              </div>
+              <div className="relative aspect-square rounded-xl overflow-hidden border border-[var(--line)]">
+                <Image src="/images/gallery/dsc-0327.webp" alt="JHBCA event" fill className="object-cover" sizes="20vw" />
+              </div>
             </div>
             <ul>
               {whyStudy.map((item, i) => (
@@ -162,7 +136,7 @@ export default function Home() {
       <section className="container-gutter py-20 md:py-28">
         <span className="chip">Academics</span>
         <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(30px,3.6vw,46px)] leading-tight mt-6 mb-14 max-w-2xl">
-          One Journey, Every Phase
+          From Grade R to Grade 12
         </h2>
 
         <div className="grid rounded-xl overflow-hidden border-t border-l border-[var(--line)] md:grid-cols-3">
@@ -196,7 +170,7 @@ export default function Home() {
         <div className="container-gutter py-20 md:py-28">
         <span className="chip">Success Stories</span>
         <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(30px,3.6vw,46px)] leading-tight mt-6 mb-14 max-w-2xl">
-          Old Bertharrians
+          Top Achievers
         </h2>
 
         <SuccessStoriesCarousel />
@@ -213,43 +187,15 @@ export default function Home() {
       <section className="container-gutter py-20 md:py-28 text-center">
         <span className="chip">Our Vision</span>
         <p className="font-[family-name:var(--font-sora)] font-light text-[clamp(24px,3.2vw,40px)] leading-snug mt-8 max-w-3xl mx-auto">
-          &ldquo;Empowering our students to acquire, demonstrate, articulate
-          and value knowledge and skills — supporting them as life-long
-          learners who practice respect, tolerance, inclusion and
-          excellence.&rdquo;
+          &ldquo;To prepare our learners for their future lives in the modern
+          world, we aim to nurture a love of learning and the pursuit of
+          academic excellence. JHB Christian Academy learners are encouraged
+          to develop independence, adaptability, determination and
+          confidence.&rdquo;
         </p>
         <Link href="/about" className="nav-link inline-block mt-8">
           Read Our Full Story →
         </Link>
-      </section>
-
-      {/* Our team */}
-      <section id="team" className="bg-[var(--bg-alt)] border-y border-[var(--line)]">
-        <div className="container-gutter py-20 md:py-28">
-          <span className="chip">The People</span>
-          <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(30px,3.6vw,46px)] leading-tight mt-6 mb-14">
-            Our Team
-          </h2>
-
-          <div className="grid rounded-xl overflow-hidden border-t border-l border-[var(--line)] sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((member, i) => (
-              <div
-                key={`${member.name}-${i}`}
-                className="bg-[var(--panel)] p-6 flex items-center gap-4 border-r border-b border-[var(--line)]"
-              >
-                <div className="avatar-initials">{initials(member.name)}</div>
-                <div>
-                  <p className="font-[family-name:var(--font-sora)] leading-snug">
-                    {member.name}
-                  </p>
-                  <p className="mono-label text-[11px] text-[var(--text-dimmer)] mt-1">
-                    {member.role}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Gallery preview */}
@@ -258,7 +204,7 @@ export default function Home() {
           <div>
             <span className="chip">Our Gallery</span>
             <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(30px,3.6vw,46px)] leading-tight mt-6">
-              Life at Bertharry
+              Life at JHBCA
             </h2>
           </div>
           <Link href="/gallery" className="nav-link">
@@ -267,9 +213,14 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {galleryPreview.map((item) => (
-            <Link key={item.label} href={item.href} className="block">
-              <ImagePlaceholder label={item.label} className="aspect-square" />
+          {[
+            { src: '/images/gallery/img-9500.webp', label: 'Learners', href: '/gallery' },
+            { src: '/images/gallery/dsc-0327.webp', label: 'Events', href: '/gallery' },
+            { src: '/images/gallery/img-9532.webp', label: 'Activities', href: '/gallery' },
+            { src: '/images/gallery/dsc-0035.webp', label: 'Campus', href: '/gallery' },
+          ].map((item) => (
+            <Link key={item.label} href={item.href} className="block relative aspect-square rounded-xl overflow-hidden border border-[var(--line)]">
+              <Image src={item.src} alt={item.label} fill className="object-cover hover:scale-105 transition-transform duration-500" sizes="(min-width:1024px) 25vw, 50vw" />
             </Link>
           ))}
         </div>
@@ -308,23 +259,15 @@ export default function Home() {
       {/* CTA */}
       <section className="section-dark bg-[var(--fill-solid)] text-[#f5f4f1]">
         <div className="container-gutter py-20 md:py-28 grid items-center gap-10 lg:grid-cols-[1fr_1.4fr_1fr]">
-          <div
-            className="hidden lg:flex items-end p-5 aspect-[4/5] rounded-xl border border-[rgba(245,244,241,0.16)] overflow-hidden"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(135deg, rgba(245,244,241,0.06) 0px, rgba(245,244,241,0.06) 1px, transparent 1px, transparent 14px)",
-            }}
-          >
-            <span className="mono-label text-[10px] text-[rgba(245,244,241,0.5)] border border-[rgba(245,244,241,0.2)] rounded-md px-2.5 py-1.5">
-              Photo Pending
-            </span>
+          <div className="hidden lg:relative lg:flex aspect-[4/5] rounded-xl overflow-hidden border border-[rgba(245,244,241,0.16)]">
+            <Image src="/images/alumni.webp" alt="JHBCA alumni" fill className="object-cover" sizes="25vw" />
           </div>
           <div className="text-center">
             <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(28px,4vw,52px)] leading-tight">
-              Ready to Register Your Child?
+              Ready to Join JHB Christian Academy?
             </h2>
             <p className="mt-5 text-[rgba(245,244,241,0.62)]">
-              Click on the button to enroll now.
+              Affordable education from Grade R to Grade 12 in Johannesburg.
             </p>
             <div className="mt-10">
               <Link href="/admissions" className="btn-ghost">
@@ -332,16 +275,8 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div
-            className="hidden lg:flex items-end p-5 aspect-[4/5] rounded-xl border border-[rgba(245,244,241,0.16)] overflow-hidden"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(135deg, rgba(245,244,241,0.06) 0px, rgba(245,244,241,0.06) 1px, transparent 1px, transparent 14px)",
-            }}
-          >
-            <span className="mono-label text-[10px] text-[rgba(245,244,241,0.5)] border border-[rgba(245,244,241,0.2)] rounded-md px-2.5 py-1.5">
-              Photo Pending
-            </span>
+          <div className="hidden lg:relative lg:flex aspect-[4/5] rounded-xl overflow-hidden border border-[rgba(245,244,241,0.16)]">
+            <Image src="/images/team.webp" alt="JHBCA team" fill className="object-cover" sizes="25vw" />
           </div>
         </div>
       </section>

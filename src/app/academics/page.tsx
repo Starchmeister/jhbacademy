@@ -4,9 +4,9 @@ import PageHeader from "@/components/PageHeader";
 import { phases } from "@/data/academics";
 
 export const metadata: Metadata = {
-  title: "Academics — Bertharry English Private School",
+  title: "Academics — JHB Christian Academy",
   description:
-    "Pre-Primary, Primary and High School phases at Bertharry English Private School — Umalusi accredited, Tembisa.",
+    "Pre-Primary, Primary and High School phases at JHB Christian Academy — from Grade R to Grade 12 in Johannesburg.",
 };
 
 export default function AcademicsPage() {

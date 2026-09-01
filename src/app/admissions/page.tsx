@@ -4,9 +4,9 @@ import PageHeader from "@/components/PageHeader";
 import { downloads } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Admissions — Bertharry English Private School",
+  title: "Admissions — JHB Christian Academy",
   description:
-    "2025 admissions are now open at Bertharry English Private School, Tembisa. Learn about the process and apply online.",
+    `${new Date().getFullYear()} admissions are now open at JHB Christian Academy, Johannesburg. Learn about the process and apply online.`,
 };
 
 const steps = [
@@ -23,7 +23,7 @@ const steps = [
   {
     title: "Enroll",
     description:
-      "Submit your application through our online application platform to secure your child's place at Bertharry.",
+      "Submit your application through our online application platform to secure your child's place at JHB Christian Academy.",
   },
 ];
 
@@ -33,7 +33,7 @@ export default function AdmissionsPage() {
       <PageHeader
         eyebrow="Admissions"
         title="Admissions"
-        description="2025 admissions are now open. Here's how to register your child at Bertharry English Private School."
+        description={`${new Date().getFullYear()} admissions are now open. Here's how to register your child at JHB Christian Academy.`}
       />
 
       <section className="container-gutter py-20 md:py-28 grid rounded-xl overflow-hidden border-t border-l border-[var(--line)] md:grid-cols-3">
@@ -58,17 +58,25 @@ export default function AdmissionsPage() {
           <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(26px,3.4vw,42px)] leading-tight mt-6 mb-12 max-w-2xl">
             Everything you need to register
           </h2>
-          <div className="grid rounded-xl overflow-hidden border-t border-l border-[var(--line)] sm:grid-cols-2 lg:grid-cols-4">
+          <div className="flex flex-col gap-4">
             {downloads.map((d) => (
               <a
                 key={d.label}
                 href={d.href}
-                className="bg-[var(--panel)] p-8 flex flex-col justify-between gap-8 hover:bg-[var(--fill-ghost)] transition-colors border-r border-b border-[var(--line)]"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-[var(--panel)] border border-[var(--line)] rounded-xl px-6 py-4 hover:bg-[var(--fill-ghost)] transition-colors self-start"
               >
-                <span className="mono-label text-[11px] text-[var(--text-dimmer)]">
-                  PDF
+                <img
+                  src="/vecteezy_adobe-acrobat-reader-icon_19016806.png"
+                  alt="PDF"
+                  width={28}
+                  height={28}
+                  className="shrink-0"
+                />
+                <span className="font-[family-name:var(--font-sora)] text-lg leading-snug">
+                  {d.label}
                 </span>
-                <span className="text-lg leading-snug">{d.label}</span>
               </a>
             ))}
           </div>
@@ -84,9 +92,9 @@ export default function AdmissionsPage() {
             Apply online through our admissions platform.
           </p>
           <div className="mt-10">
-            <Link href="/apply" className="btn-ghost">
+            <a href="https://3852.d6plus.co.za/register/" target="_blank" rel="noopener noreferrer" className="btn-ghost">
               Apply Online
-            </Link>
+            </a>
           </div>
         </div>
       </section>

@@ -18,24 +18,24 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.bertharryschools.co.za"),
-  title: "Bertharry English Private School",
+  metadataBase: new URL("https://www.jhb.goonline.co.za"),
+  title: "JHB Christian Academy",
   description:
-    "Bertharry English Private School — quality primary and secondary education in Tembisa since 1991.",
+    "JHB Christian Academy — affordable, Christ-centered education from Grade R to Grade 12 in Johannesburg.",
   openGraph: {
-    title: "Bertharry English Private School",
+    title: "JHB Christian Academy",
     description:
-      "Quality primary and secondary education in Tembisa since 1991. 2025 admissions are now open.",
+      "Affordable, Christ-centered education from Grade R to Grade 12 in Johannesburg. Admissions now open.",
     url: "/",
-    siteName: "Bertharry English Private School",
+    siteName: "JHB Christian Academy",
     locale: "en_ZA",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Bertharry English Private School",
+    title: "JHB Christian Academy",
     description:
-      "Quality primary and secondary education in Tembisa since 1991. 2025 admissions are now open.",
+      "Affordable, Christ-centered education from Grade R to Grade 12 in Johannesburg. Admissions now open.",
   },
 };
 

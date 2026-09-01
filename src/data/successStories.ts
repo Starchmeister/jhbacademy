@@ -1,22 +1,22 @@
 export const successStories = [
   {
-    name: "Kgodiso Komane",
-    role: "Lawyer, MP, Entrepreneur",
-    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=590&h=640&fit=crop&crop=faces",
+    name: "Devandre Ozoezi",
+    role: "Grade 12 Top Achiever",
+    img: "/DevandreOzoezi_grade12_top_achiever.webp",
   },
   {
-    name: "Ratile Boitumelo Mabitsela",
-    role: "Director of Miss Tembisa, Businesswoman",
-    img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=590&h=640&fit=crop&crop=faces",
+    name: "Ntokozo Sibeko",
+    role: "Grade 8 Top Achiever",
+    img: "/Ntokozo_Sibeko_grade8_top_achiever.webp",
   },
   {
-    name: "Hartley Phasha",
-    role: "Statistician, Consultant, Senior Quantitative Analyst",
-    img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=590&h=640&fit=crop&crop=faces",
+    name: "Noluthandо Dzana",
+    role: "Grade 4 Top Achiever",
+    img: "/NoluthandoDzana top achiver grade 4.webp",
   },
   {
-    name: "Matuma Langa",
-    role: "Chairperson, Business Analyst, Mentor",
-    img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=590&h=640&fit=crop&crop=faces",
+    name: "Mihla Shabangu",
+    role: "Grade 1 Top Achiever",
+    img: "/top achiever Mihla shabangu Grade 1.webp",
   },
 ];

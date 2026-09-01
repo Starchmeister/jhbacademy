@@ -2,15 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import PhaseNav from "@/components/PhaseNav";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import Image from "next/image";
 import { phases, primaryOutcomes, primarySubjectGroups } from "@/data/academics";
 
 const phase = phases.find((p) => p.id === "primary")!;
 
 export const metadata: Metadata = {
-  title: "Primary School — Bertharry English Private School",
+  title: "Primary School — JHB Christian Academy",
   description:
-    "Bertharry Primary School — academics, sport, extra-mural activities and field trips for Grades 1 to 6.",
+    "JHB Christian Academy Primary School — academics, sport, extra-mural activities and field trips for Grades 1 to 6.",
 };
 
 export default function PrimaryPage() {
@@ -39,10 +39,10 @@ export default function PrimaryPage() {
       <section className="container-gutter py-20 md:py-28 grid gap-14 lg:grid-cols-[1.3fr_1fr] items-start">
         <div>
           <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(26px,3vw,38px)] leading-tight max-w-3xl">
-            Welcome to Bertharry Primary School
+            Welcome to JHBCA Primary School
           </h2>
           <p className="mt-6 text-[var(--text-dim)] text-lg leading-relaxed max-w-3xl">
-            At Bertharry Primary School, we offer a comprehensive education
+            At JHB Christian Academy Primary School, we offer a comprehensive education
             that focuses on academics, sports, extra-mural activities, and
             field trips to foster well-rounded development in our learners.
             Our core academic curriculum covers subjects like mathematics,
@@ -59,7 +59,9 @@ export default function PrimaryPage() {
             enriching their understanding of various subjects.
           </p>
         </div>
-        <ImagePlaceholder className="aspect-[4/5]" />
+        <div className="relative aspect-[4/5] rounded-xl overflow-hidden border border-[var(--line)]">
+          <Image src="/images/about-2.webp" alt="JHBCA Primary School" fill className="object-cover" sizes="(min-width:1024px) 40vw, 100vw" />
+        </div>
       </section>
 
       {/* Outcomes */}
@@ -70,7 +72,7 @@ export default function PrimaryPage() {
             By the end of primary school
           </h2>
           <p className="text-[var(--text-dim)] text-lg leading-relaxed max-w-2xl mb-10">
-            Bertharry learners are expected to have developed:
+            JHBCA learners are expected to have developed:
           </p>
           <ul className="grid rounded-xl overflow-hidden border-t border-l border-[var(--line)] md:grid-cols-2">
             {primaryOutcomes.map((item, i) => (
@@ -83,8 +85,8 @@ export default function PrimaryPage() {
             ))}
           </ul>
           <p className="mt-10 text-[var(--text-dim)] text-lg leading-relaxed max-w-2xl">
-            Our goal is to ensure that students leave Bertharry Primary
-            School equipped with the knowledge, skills, and confidence to
+            Our goal is to ensure that students leave JHBCA Primary School
+            equipped with the knowledge, skills, and confidence to
             succeed in secondary school and beyond.
           </p>
         </div>

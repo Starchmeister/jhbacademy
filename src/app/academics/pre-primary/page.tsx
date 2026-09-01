@@ -2,15 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import PhaseNav from "@/components/PhaseNav";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import Image from "next/image";
 import { phases, prePrimaryCoreSkills } from "@/data/academics";
 
 const phase = phases.find((p) => p.id === "pre-primary")!;
 
 export const metadata: Metadata = {
-  title: "Pre-Primary — Bertharry English Private School",
+  title: "Pre-Primary — JHB Christian Academy",
   description:
-    "Bertharry Pre-Primary School — a nurturing environment for children aged 4 to 6, with one-on-one sessions and aftercare until 17:30.",
+    "JHB Christian Academy Pre-Primary — a nurturing environment for children aged 4 to 6, with one-on-one sessions and aftercare until 17:30.",
 };
 
 export default function PrePrimaryPage() {
@@ -39,10 +39,10 @@ export default function PrePrimaryPage() {
       <section className="container-gutter py-20 md:py-28 grid gap-14 lg:grid-cols-[1.3fr_1fr] items-start">
         <div>
           <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(26px,3vw,38px)] leading-tight max-w-3xl">
-            Welcome to Bertharry Pre-Primary School
+            Welcome to JHBCA Pre-Primary
           </h2>
           <p className="mt-6 text-[var(--text-dim)] text-lg leading-relaxed max-w-3xl">
-            At Bertharry, we are deeply committed to creating a nurturing,
+            At JHB Christian Academy, we are deeply committed to creating a nurturing,
             stimulating environment where children aged 4 to 6 can thrive. We
             recognize that these early years are crucial for a child&apos;s
             overall development, and our pre-primary curriculum is
@@ -59,7 +59,9 @@ export default function PrePrimaryPage() {
             future success in both school and beyond.
           </p>
         </div>
-        <ImagePlaceholder className="aspect-[4/5]" />
+        <div className="relative aspect-[4/5] rounded-xl overflow-hidden border border-[var(--line)]">
+          <Image src="/images/about-1.webp" alt="JHBCA Pre-Primary" fill className="object-cover" sizes="(min-width:1024px) 40vw, 100vw" />
+        </div>
       </section>
 
       {/* Core skills */}

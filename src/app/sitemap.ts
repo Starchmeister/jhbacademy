@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://www.bertharryschools.co.za";
+const baseUrl = "https://www.jhb.goonline.co.za";
 
 const routes = [
   "",

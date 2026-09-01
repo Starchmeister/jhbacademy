@@ -3,9 +3,9 @@ import PageHeader from "@/components/PageHeader";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Apply Online — Bertharry English Private School",
+  title: "Apply Online — JHB Christian Academy",
   description:
-    "Apply online for admission to Bertharry English Private School via our D6 application platform.",
+    "Apply online for admission to JHB Christian Academy via our online application platform.",
 };
 
 export default function ApplyPage() {
@@ -19,26 +19,23 @@ export default function ApplyPage() {
 
       <section className="container-gutter py-20 md:py-28">
         <div className="rounded-xl border border-[var(--line)] bg-[var(--panel)] p-10 md:p-16 text-center max-w-2xl mx-auto">
-          <span className="chip">2025 Admissions Open</span>
+          <span className="chip">{new Date().getFullYear()} Admissions Open</span>
           <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(26px,3.4vw,40px)] leading-tight mt-6">
             Apply via the D6 Platform
           </h2>
           <p className="mt-5 text-[var(--text-dim)] leading-relaxed">
-            Click below to be taken to Bertharry&apos;s official online
-            application platform, hosted on D6, to submit your child&apos;s
+            Click below to be taken to JHB Christian Academy&apos;s official
+            online application platform to submit your child&apos;s
             application.
           </p>
           <a
-            href="#"
+            href="https://3852.d6plus.co.za/register/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-solid mt-10"
-            aria-disabled="true"
           >
             Apply on D6
           </a>
-          <p className="mt-4 text-xs text-[var(--text-dimmer)]">
-            This button links out to Bertharry&apos;s D6 application
-            platform — awaiting the school&apos;s D6 portal URL to go live.
-          </p>
         </div>
 
         <p className="text-center mt-10 text-[var(--text-dim)]">

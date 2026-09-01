@@ -4,9 +4,9 @@ import PageHeader from "@/components/PageHeader";
 import SuccessStoriesCarousel from "@/components/SuccessStoriesCarousel";
 
 export const metadata: Metadata = {
-  title: "Success Stories — Bertharry English Private School",
+  title: "Success Stories — JHB Christian Academy",
   description:
-    "Old Bertharrians who went on to become lawyers, entrepreneurs, analysts and mentors.",
+    "JHBCA alumni who went on to become lawyers, entrepreneurs, analysts and mentors.",
 };
 
 export default function SuccessStoriesPage() {
@@ -14,8 +14,8 @@ export default function SuccessStoriesPage() {
     <>
       <PageHeader
         eyebrow="Success Stories"
-        title="Old Bertharrians"
-        description="Three decades of learners have passed through Bertharry. Here are a few who are putting that foundation to work."
+        title="Top Achievers"
+        description="Learners who have passed through JHB Christian Academy and are putting that foundation to work."
       />
 
       <section className="container-gutter py-20 md:py-28">

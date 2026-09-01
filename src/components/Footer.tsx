@@ -7,19 +7,18 @@ export default function Footer() {
       <div className="container-gutter py-16 grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <img
-            src="/bertharrylogo.svg"
-            alt="Bertharry English Private School"
+            src="/LOGGO2.png"
+            alt="JHB Christian Academy"
             width={64}
             height={63}
             className="h-12 w-auto rounded-lg mb-5"
           />
           <p className="text-[var(--text-dim)] text-sm leading-relaxed max-w-sm">
-            Bertharry English Private School has been committed to providing
-            quality education for over three decades. We proudly serve the
-            community of Tembisa, offering both primary and secondary
-            education in a nurturing and supportive environment. Our
-            learners are empowered to excel academically while also
-            developing the life skills needed for future success.
+            JHB Christian Academy is a Christ-centered school in Johannesburg
+            offering affordable education from Grade R to Grade 12. We combine
+            academic excellence with spiritual growth and personal development,
+            preparing students for success in life and a positive impact on
+            their communities.
           </p>
         </div>
 
@@ -83,7 +82,7 @@ export default function Footer() {
 
       <div className="border-t border-[var(--line)]">
         <p className="container-gutter py-5 text-center text-xs text-[var(--text-dimmer)] mono-label">
-          © {new Date().getFullYear()} Bertharry English Private School — All
+          © {new Date().getFullYear()} JHB Christian Academy — All
           Rights Reserved
         </p>
       </div>

@@ -29,7 +29,7 @@ export default function OpengraphImage() {
             padding: "10px 20px",
           }}
         >
-          Est. 1991 — Tembisa
+          Est. 2019 — Johannesburg
         </div>
         <div
           style={{
@@ -41,7 +41,7 @@ export default function OpengraphImage() {
             lineHeight: 1.05,
           }}
         >
-          Bertharry English Private School
+          JHB Christian Academy
         </div>
       </div>
     ),
