@@ -132,7 +132,7 @@ export default function AboutPage() {
             <p className="mt-6 text-[var(--text-dim)] text-lg leading-relaxed max-w-xl">
               The academy has grown to offer five different streams in the
               FET phase and achieved an outstanding 100%+ pass rate in the
-              2024 Matric examinations, cementing its reputation as one of
+              2025 Matric examinations, cementing its reputation as one of
               Johannesburg&apos;s leading independent schools.
             </p>
           </div>

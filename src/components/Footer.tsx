@@ -82,8 +82,15 @@ export default function Footer() {
 
       <div className="border-t border-[var(--line)]">
         <p className="container-gutter py-5 text-center text-xs text-[var(--text-dimmer)] mono-label">
-          © {new Date().getFullYear()} JHB Christian Academy — All
-          Rights Reserved
+          © {new Date().getFullYear()} JHB Christian Academy — All Rights Reserved. Developed by{" "}
+          <a
+            href="https://bluedeed.co.za"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-hover"
+          >
+            Bluedeed
+          </a>
         </p>
       </div>
     </footer>

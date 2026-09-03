@@ -5,7 +5,7 @@ import SuccessStoriesCarousel from "@/components/SuccessStoriesCarousel";
 
 const whyStudy = [
   "Christ-centered education ethos",
-  "Over 100% pass rate for 2024 Matric results",
+  "Over 100% pass rate for 2025 Matric results",
   "5 different streams available in FET phase",
   "Strong focus on academics, sports and personal development",
 ];
@@ -56,7 +56,7 @@ export default function Home() {
             <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-px bg-[var(--line)] rounded-xl overflow-hidden border border-[var(--line)]">
               {[
                 { value: "2019", label: "Founded" },
-                { value: "100%+", label: "2024 Pass Rate" },
+                { value: "100%+", label: "2025 Pass Rate" },
                 { value: "5", label: "FET Streams" },
                 { value: "Gr R–12", label: "Grades Offered" },
               ].map((stat) => (
