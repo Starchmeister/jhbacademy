@@ -198,6 +198,40 @@ export default function Home() {
         </Link>
       </section>
 
+      {/* Accreditations */}
+      <section className="bg-[var(--bg-alt)] border-y border-[var(--line)]">
+        <div className="container-gutter py-20 md:py-28">
+          <span className="chip">Accreditations</span>
+          <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(30px,3.6vw,46px)] leading-tight mt-6 mb-14 max-w-2xl">
+            Officially Recognised &amp; Accredited
+          </h2>
+          <div className="grid gap-8 sm:grid-cols-2 max-w-3xl">
+            <div className="bg-[var(--panel)] rounded-xl border border-[var(--line)] p-8 flex flex-col gap-6">
+              <div className="relative h-20 w-full">
+                <Image src="/accreditations/umalusu.png" alt="Umalusi" fill className="object-contain object-left" sizes="300px" />
+              </div>
+              <div>
+                <p className="font-[family-name:var(--font-sora)] text-lg">Umalusi</p>
+                <p className="mt-2 text-[var(--text-dim)] text-sm leading-relaxed">
+                  South Africa&apos;s official Council for Quality Assurance in General and Further Education and Training.
+                </p>
+              </div>
+            </div>
+            <div className="bg-[var(--panel)] rounded-xl border border-[var(--line)] p-8 flex flex-col gap-6">
+              <div className="relative h-20 w-full">
+                <Image src="/accreditations/gauteng.png" alt="Gauteng Department of Education" fill className="object-contain object-left" sizes="300px" />
+              </div>
+              <div>
+                <p className="font-[family-name:var(--font-sora)] text-lg">Gauteng Department of Education</p>
+                <p className="mt-2 text-[var(--text-dim)] text-sm leading-relaxed">
+                  Registered and recognised by the Gauteng Department of Education.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Gallery preview */}
       <section className="container-gutter py-20 md:py-28">
         <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
