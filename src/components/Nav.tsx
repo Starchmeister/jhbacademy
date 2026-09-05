@@ -38,7 +38,7 @@ export default function Nav() {
           >
             {site.phone}
           </a>
-          <a href="#" aria-label="Facebook" className="mono-label text-[11px] link-hover">
+          <a href={site.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="mono-label text-[11px] link-hover">
             Facebook
           </a>
         </div>
@@ -198,7 +198,7 @@ export default function Nav() {
 
       <div className="bg-[var(--accent)] text-[#f5f4f1]">
         <p className="container-gutter py-2.5 text-center mono-label text-[13px]">
-          {new Date().getFullYear()} Admissions are now open —{" "}
+          {(() => { const d = new Date(); return d.getMonth() >= 8 ? d.getFullYear() + 1 : d.getFullYear(); })()} Admissions are now open —{" "}
           <Link href="/admissions" className="underline underline-offset-4">
             Apply Now
           </Link>

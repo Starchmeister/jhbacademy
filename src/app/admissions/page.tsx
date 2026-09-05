@@ -6,7 +6,7 @@ import { downloads } from "@/data/site";
 export const metadata: Metadata = {
   title: "Admissions — JHB Christian Academy",
   description:
-    `${new Date().getFullYear()} admissions are now open at JHB Christian Academy, Johannesburg. Learn about the process and apply online.`,
+    `${(() => { const d = new Date(); return d.getMonth() >= 8 ? d.getFullYear() + 1 : d.getFullYear(); })()} admissions are now open at JHB Christian Academy, Johannesburg. Learn about the process and apply online.`,
 };
 
 const steps = [
@@ -33,7 +33,7 @@ export default function AdmissionsPage() {
       <PageHeader
         eyebrow="Admissions"
         title="Admissions"
-        description={`${new Date().getFullYear()} admissions are now open. Here's how to register your child at JHB Christian Academy.`}
+        description={`${(() => { const d = new Date(); return d.getMonth() >= 8 ? d.getFullYear() + 1 : d.getFullYear(); })()} admissions are now open. Here's how to register your child at JHB Christian Academy.`}
       />
 
       <section className="container-gutter py-20 md:py-28 grid rounded-xl overflow-hidden border-t border-l border-[var(--line)] md:grid-cols-3">
