@@ -7,7 +7,8 @@ export const site = {
   phone: "011 025 7333",
   altPhone: "078 112 3137 / 065 512 4003 / 081 583 7908",
   postalAddress: "P.O. BOX 1223 Southdale, Johannesburg, 2135",
-  website: "www.jhb.goonline.co.za",
+  website: "www.jhbchristianacademy.co.za",
+  facebook: "https://www.facebook.com/share/18GNkhd4w5/?mibextid=wwXIfr",
 };
 
 export const navLinks = [

@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.jhb.goonline.co.za"),
+  metadataBase: new URL("https://www.jhbchristianacademy.co.za"),
   title: "JHB Christian Academy",
   description:
     "JHB Christian Academy — affordable, Christ-centered education from Grade R to Grade 12 in Johannesburg.",

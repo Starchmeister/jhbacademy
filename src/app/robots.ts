@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.jhb.goonline.co.za/sitemap.xml",
+    sitemap: "https://www.jhbchristianacademy.co.za/sitemap.xml",
   };
 }
