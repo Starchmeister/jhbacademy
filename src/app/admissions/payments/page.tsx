@@ -14,16 +14,10 @@ export default function PaymentsPage() {
       <PageHeader
         eyebrow="Payments"
         title="Payments"
-        parent={{ label: "About Us", href: "/about" }}
+        parent={{ label: "Admissions", href: "/admissions" }}
         description="School fees payment instructions and bank details."
       />
 
-      <div className="container-gutter py-5 border-b border-[var(--line)] flex items-center gap-6">
-        <span className="font-[family-name:var(--font-sora)] text-sm text-[var(--text-dim)]">In this section:</span>
-        <Link href="/about" className="mono-label text-[13px] link-hover">About Us</Link>
-        <Link href="/about/fees-and-uniform" className="mono-label text-[13px] link-hover">Fees &amp; Uniform</Link>
-        <Link href="/about/payments" className="mono-label text-[13px] text-[var(--accent)] underline underline-offset-4">Payments</Link>
-      </div>
 
       <section className="container-gutter py-20 md:py-28">
         <span className="chip">Bank Details</span>
@@ -76,14 +70,23 @@ export default function PaymentsPage() {
         </div>
       </section>
 
-      <div className="container-gutter py-8 flex items-center justify-between border-b border-[var(--line)]">
-        <Link href="/about/fees-and-uniform" className="nav-link">
-          ← Fees &amp; Uniform
-        </Link>
-        <Link href="/admissions" className="nav-link">
-          Admissions →
-        </Link>
-      </div>
+      <section className="border-y border-[var(--line)]">
+        <div className="container-gutter py-16 md:py-20">
+          <p className="mono-label text-[11px] text-[var(--text-dimmer)] mb-8">Also in Admissions</p>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <Link href="/admissions/fees" className="group rounded-xl border border-[var(--line)] bg-[var(--panel)] p-8 hover:bg-[var(--fill-ghost)] transition-colors">
+              <p className="font-[family-name:var(--font-sora)] text-xl">Fee Structure</p>
+              <p className="mt-3 text-[var(--text-dim)] text-sm leading-relaxed">View monthly and annual tuition fees for all grades.</p>
+              <p className="mt-6 mono-label text-[11px] text-[var(--accent)]">View Fees →</p>
+            </Link>
+            <Link href="/admissions/uniform" className="group rounded-xl border border-[var(--line)] bg-[var(--panel)] p-8 hover:bg-[var(--fill-ghost)] transition-colors">
+              <p className="font-[family-name:var(--font-sora)] text-xl">Uniform &amp; Dress Code</p>
+              <p className="mt-3 text-[var(--text-dim)] text-sm leading-relaxed">View the uniform dress code and full price list from the school uniform shop.</p>
+              <p className="mt-6 mono-label text-[11px] text-[var(--accent)]">View Uniform →</p>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <section className="section-dark bg-[var(--fill-solid)] text-[#f5f4f1]">
         <div className="container-gutter py-20 md:py-28 text-center">

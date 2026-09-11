@@ -6,7 +6,7 @@ export const phases = [
     grades: "Age 4 – 6",
     summary:
       "A nurturing, stimulating environment where children develop the cognitive, emotional, social and physical foundations for lifelong learning.",
-    highlights: ["One-on-one Sessions", "Individual Attention", "Aftercare until 17:30"],
+    highlights: ["One-on-one Sessions", "Individual Attention"],
   },
   {
     id: "primary",
@@ -15,7 +15,7 @@ export const phases = [
     grades: "Grades 1 – 6",
     summary:
       "A comprehensive education spanning academics, sport, extra-mural activities and field trips to build well-rounded, confident learners.",
-    highlights: ["Sports", "One-on-one Sessions", "Individual Attention", "Aftercare until 17:30"],
+    highlights: ["Sports", "One-on-one Sessions", "Individual Attention"],
   },
   {
     id: "high-school",

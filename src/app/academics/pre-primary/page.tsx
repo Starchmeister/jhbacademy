@@ -10,7 +10,7 @@ const phase = phases.find((p) => p.id === "pre-primary")!;
 export const metadata: Metadata = {
   title: "Pre-Primary — JHB Christian Academy",
   description:
-    "JHB Christian Academy Pre-Primary — a nurturing environment for children aged 4 to 6, with one-on-one sessions and aftercare until 17:30.",
+    "JHB Christian Academy Pre-Primary — a nurturing environment for children aged 4 to 6, with one-on-one sessions and individual attention.",
 };
 
 export default function PrePrimaryPage() {
@@ -99,20 +99,6 @@ export default function PrePrimaryPage() {
         </div>
       </section>
 
-      {/* Aftercare */}
-      <section className="container-gutter py-20 md:py-28 grid gap-14 lg:grid-cols-[1fr_1.3fr] items-start">
-        <div>
-          <span className="chip">Aftercare</span>
-          <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(26px,3vw,38px)] leading-tight mt-6">
-            Until 17:30
-          </h2>
-        </div>
-        <p className="text-[var(--text-dim)] text-lg leading-relaxed max-w-2xl">
-          Our aftercare program is designed to create a safe and enriching
-          environment where children can continue to grow academically and
-          socially after regular school hours.
-        </p>
-      </section>
 
       <PhaseNav currentId="pre-primary" />
 

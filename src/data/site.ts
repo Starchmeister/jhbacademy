@@ -18,8 +18,6 @@ export const navLinks = [
     href: "/about",
     children: [
       { label: "About Us", href: "/about" },
-      { label: "Fees & Uniform", href: "/about/fees-and-uniform" },
-      { label: "Payments", href: "/about/payments" },
     ],
   },
   {
@@ -31,7 +29,16 @@ export const navLinks = [
       { label: "High School", href: "/academics/high-school" },
     ],
   },
-  { label: "Admissions", href: "/admissions" },
+  {
+    label: "Admissions",
+    href: "/admissions",
+    children: [
+      { label: "Admissions", href: "/admissions" },
+      { label: "Fees", href: "/admissions/fees" },
+      { label: "Uniform", href: "/admissions/uniform" },
+      { label: "Payments", href: "/admissions/payments" },
+    ],
+  },
   { label: "Our Gallery", href: "/gallery" },
   { label: "Apply Online", href: "/apply" },
   { label: "Contact Us", href: "/contact" },

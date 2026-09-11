@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "JHB Christian Academy is a Christ-centered school in Johannesburg offering affordable education from Grade R to Grade 12, combining academic excellence with spiritual growth.",
 };
 
-const alumniFields = ["Doctors", "Lawyers", "Engineers", "Business Leaders"];
+const alumniFields = ["Medicine", "Law", "Engineering", "Business & Commerce"];
 
 const missionObjectives = [
   "To provide or direct the effort of staff, parents and learners.",
@@ -47,8 +47,6 @@ export default function AboutPage() {
       <div className="container-gutter py-5 border-b border-[var(--line)] flex items-center gap-6">
         <span className="font-[family-name:var(--font-sora)] text-sm text-[var(--text-dim)]">In this section:</span>
         <Link href="/about" className="mono-label text-[13px] text-[var(--accent)] underline underline-offset-4">About Us</Link>
-        <Link href="/about/fees-and-uniform" className="mono-label text-[13px] link-hover">Fees &amp; Uniform</Link>
-        <Link href="/about/payments" className="mono-label text-[13px] link-hover">Payments</Link>
       </div>
 
       {/* Welcome */}
@@ -85,7 +83,7 @@ export default function AboutPage() {
         </div>
         <div className="rounded-xl border border-[var(--line)] bg-[var(--panel)] p-8 md:p-10">
           <p className="mono-label text-[11px] text-[var(--text-dimmer)]">
-            Our Alumni Go On To Become
+            Our Graduates Are Now Studying
           </p>
           <ul className="mt-6 space-y-5">
             {alumniFields.map((field, i) => (
@@ -101,14 +99,14 @@ export default function AboutPage() {
           </ul>
           <div className="h-px bg-[var(--line)] my-8" />
           <p className="text-[var(--text-dim)] leading-relaxed text-sm">
-            See where some of our top achievers are today on our{" "}
+            Our graduates are making their mark at universities across South Africa, pursuing careers that will shape their futures. See our{" "}
             <Link
               href="/success-stories"
               className="underline underline-offset-4 link-hover"
             >
               Success Stories
             </Link>{" "}
-            page.
+            to learn more.
           </p>
         </div>
         </div>
@@ -138,12 +136,12 @@ export default function AboutPage() {
           </div>
 
           <div className="rounded-xl border border-[var(--line)] bg-[var(--panel)] overflow-hidden">
-            <div className="relative w-full aspect-[4/3]">
+            <div className="relative w-full aspect-[3/4]">
               <Image
                 src="/principal.webp"
-                alt="Michael Macfarlane — Principal"
+                alt="Dr Govender — Principal"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
                 sizes="(min-width: 1024px) 30vw, 100vw"
               />
             </div>
@@ -152,13 +150,14 @@ export default function AboutPage() {
                 Principal
               </p>
               <p className="font-[family-name:var(--font-sora)] text-2xl mt-4">
-                Michael Macfarlane
+                Dr Sureshnee Govender
+              </p>
+              <p className="mono-label text-[11px] text-[var(--text-dimmer)] mt-1">
+                PhD — Education Leadership
               </p>
               <div className="h-px bg-[var(--line)] my-6" />
-              <p className="text-[var(--text-dim)] leading-relaxed">
-                Founded in 2019, JHB Christian Academy has served Johannesburg
-                families with affordable, quality Christian education from
-                Grade R to Grade 12 ever since.
+              <p className="text-[var(--text-dim)] leading-relaxed text-sm">
+                Dr Sureshnee Govender is an education leadership expert from the University of Johannesburg, holding a PhD and extensive qualifications in public management and school governance. She has a strong academic focus on gender equality in education, and serves as a consultant, motivational speaker, and School Governing Body trainer.
               </p>
             </div>
           </div>
@@ -208,7 +207,7 @@ export default function AboutPage() {
       <section className="container-gutter py-20 md:py-28">
         <span className="chip">Why JHBCA</span>
         <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(28px,3.4vw,44px)] leading-tight mt-6 mb-12 max-w-2xl">
-          What sets a JHBCA learner apart
+          What sets JHBCA apart
         </h2>
         <ul className="grid rounded-xl overflow-hidden border-t border-l border-[var(--line)] sm:grid-cols-2">
           {whyStudy.map((item, i) => (

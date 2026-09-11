@@ -20,11 +20,6 @@ const steps = [
     description:
       "Download and complete the registration form, along with the fee structure and course structure documents below.",
   },
-  {
-    title: "Enroll",
-    description:
-      "Submit your application through our online application platform to secure your child's place at JHB Christian Academy.",
-  },
 ];
 
 export default function AdmissionsPage() {
@@ -35,6 +30,17 @@ export default function AdmissionsPage() {
         title="Admissions"
         description={`${(() => { const d = new Date(); return d.getMonth() >= 8 ? d.getFullYear() + 1 : d.getFullYear(); })()} admissions are now open. Here's how to register your child at JHB Christian Academy.`}
       />
+
+      <div className="container-gutter pt-16 pb-10">
+        <a
+          href="https://3852.d6plus.co.za/register/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-solid"
+        >
+          Apply Online Now
+        </a>
+      </div>
 
       <section className="container-gutter py-20 md:py-28 grid rounded-xl overflow-hidden border-t border-l border-[var(--line)] md:grid-cols-3">
         {steps.map((step, i) => (
@@ -50,6 +56,21 @@ export default function AdmissionsPage() {
             </p>
           </div>
         ))}
+        <div className="bg-[var(--bg)] p-8 md:p-10 border-r border-b border-[var(--line)]">
+          <span className="mono-label text-[var(--text-dimmer)] text-sm">03</span>
+          <h2 className="font-[family-name:var(--font-sora)] text-2xl mt-4">Enroll</h2>
+          <p className="mt-4 text-[var(--text-dim)] leading-relaxed">
+            Submit your application through our online application platform to secure your child&apos;s place at JHB Christian Academy.
+          </p>
+          <a
+            href="https://3852.d6plus.co.za/register/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-6 mono-label text-[11px] text-[var(--accent)] underline underline-offset-4"
+          >
+            Apply Online →
+          </a>
+        </div>
       </section>
 
       <section className="bg-[var(--bg-alt)] border-y border-[var(--line)]">

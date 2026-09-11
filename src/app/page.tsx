@@ -68,17 +68,16 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right — video panel */}
+          {/* Right — hero image */}
           <div className="relative rounded-2xl overflow-hidden border border-[var(--line)] aspect-[9/10] lg:aspect-[4/5]">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover"
-            >
-              <source src="/images/home_page_1.webm" type="video/webm" />
-            </video>
+            <Image
+              src="/images/homepagehero.webp"
+              alt="JHB Christian Academy learners"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              priority
+            />
           </div>
 
         </div>
