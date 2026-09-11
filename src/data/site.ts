@@ -58,4 +58,8 @@ export const downloads = [
     label: "Enrolment Form",
     href: "https://www.jhb.goonline.co.za/assets/docs/JHBCA-ENROLEMENT-FORM-2024.pdf",
   },
+  {
+    label: "Fee Structure",
+    href: "https://acrobat.adobe.com/id/urn:aaid:sc:EU:c6af0f2a-914e-474d-a2ae-8bbf4fc3f0b6",
+  },
 ];

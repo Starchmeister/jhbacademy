@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 
@@ -106,6 +107,72 @@ export default function UniformPage() {
                 {item}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Uniform Photos */}
+      <section className="border-b border-[var(--line)]">
+        <div className="container-gutter py-20 md:py-28">
+          <span className="chip">Uniform Preview</span>
+          <h2 className="font-[family-name:var(--font-sora)] font-light text-[clamp(26px,3vw,38px)] leading-tight mt-6 mb-12">
+            Uniform by Phase
+          </h2>
+
+          <h3 className="font-[family-name:var(--font-sora)] font-light text-2xl mb-8">Primary Phase</h3>
+          <div className="grid gap-8 sm:grid-cols-2 mb-16">
+            <div className="flex flex-col gap-4">
+              <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-[var(--line)] bg-[var(--panel)]">
+                <Image
+                  src="/images/gallery/facilities/dsc-0022.webp"
+                  alt="Primary Phase — Boys Uniform"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
+              <p className="mono-label text-[11px] text-[var(--text-dimmer)] text-center">Boys Uniform</p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-[var(--line)] bg-[var(--panel)]">
+                <Image
+                  src="/images/gallery/facilities/dsc-0035.webp"
+                  alt="Primary Phase — Girls Uniform"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
+              <p className="mono-label text-[11px] text-[var(--text-dimmer)] text-center">Girls Uniform</p>
+            </div>
+          </div>
+
+          <h3 className="font-[family-name:var(--font-sora)] font-light text-2xl mb-8">High School Phase</h3>
+          <div className="grid gap-8 sm:grid-cols-2">
+            <div className="flex flex-col gap-4">
+              <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-[var(--line)] bg-[var(--panel)]">
+                <Image
+                  src="/images/highschool-uniform-boys.webp"
+                  alt="High School Phase — Boys Uniform"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
+              <p className="mono-label text-[11px] text-[var(--text-dimmer)] text-center">Boys Uniform</p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-[var(--line)] bg-[var(--panel)]">
+                <Image
+                  src="/images/highschool-uniform-girls.webp"
+                  alt="High School Phase — Girls Uniform"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
+              <p className="mono-label text-[11px] text-[var(--text-dimmer)] text-center">Girls Uniform</p>
+            </div>
           </div>
         </div>
       </section>
